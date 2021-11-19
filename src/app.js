@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 
+const home = require('./routes/home');
 
 class App {
   constructor() {
@@ -15,7 +16,8 @@ class App {
   }
 
   routes() {
+    this.app.use('/', home);
   }
-  }
+}
 
 module.exports = new App().app;
