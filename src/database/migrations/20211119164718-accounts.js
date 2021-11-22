@@ -17,18 +17,22 @@ module.exports = {
       balance: {
         type: Sequelize.FLOAT,
         allowNull: false,
+        defaultValue: 0,
       },
       daily_withdrawal_limit: {
         type: Sequelize.FLOAT,
         allowNull: false,
+        defaultValue: 1500,
       },
       active: {
         type: Sequelize.BOOLEAN,
         allowNull: false,
+        defaultValue: true,
       },
       type_account: {
         type: Sequelize.INTEGER,
         allowNull: false,
+        defaultValue: 1, /** 1: CC, 2: CP */
       },
       created_at: {
         type: Sequelize.DATE,
