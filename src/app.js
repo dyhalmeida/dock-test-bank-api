@@ -3,6 +3,8 @@ const cors = require('cors');
 
 const home = require('./routes/home');
 
+require('./database');
+
 class App {
   constructor() {
     this.app = express();
